@@ -82,10 +82,8 @@
   <li><h4>
         <a href="">Gerrit Schoettler*</a>,
         <a href="http://ashvin.me/">Ashvin Nair*</a>,
-        <a href="">Shikhar Bahl</a>,
         <a href="">Jianlan Luo</a>,
-        <a href="">Avinash Kumar</a>,
-        <a href="">Matthias Loskyll</a>,
+        <a href="">Shikhar Bahl</a>,
         <a href="">Juan Aparicio Ojea</a>,
         <a href="https://www.tuhh.de/mum/mitarbeiter/wissenschaftliche-mitarbeiter/eugen-solowjow.html">Eugen Solowjow</a>,
         <a href="http://homes.cs.washington.edu/~svlevine/">Sergey Levine</a></h4></li>
@@ -95,8 +93,12 @@
 
 <h3 style="clear:both">Abstract</h3>
 <p style="padding-left: 10px; padding-right: 10px;">
-Conventional feedback control methods can solve various types of robot control problems very efficiently by capturing the structure with explicit models, such as rigid body equations of motion. However, many control problems in modern manufacturing deal with contacts and friction, which are difficult to capture with first-order physical modeling. Hence, applying control design methodologies to these kinds of problems often results in brittle and inaccurate controllers, which have to be manually tuned for deployment. Reinforcement learning (RL) methods have been demonstrated to be capable of learning continuous robot controllers from interactions with the environment, even for problems that include friction and contacts. In this paper, we study how we can solve difficult control problems in the real world by decomposing them into a part that is solved efficiently by conventional feedback control methods, and the residual which is solved with RL. The final control policy is a superposition of both control signals.
-We demonstrate our approach by training an agent to successfully perform a real-world block assembly task involving contacts and unstable objects.
+Connector insertion and many other tasks commonly found in modern manufacturing settings involve complex contact dynamics and friction.
+Since it is difficult to capture related physical effects with first-order modeling, traditional control methodologies often result in brittle and inaccurate controllers, which have to be manually tuned.
+Reinforcement learning (RL) methods have been demonstrated to be capable of learning controllers in such environments from autonomous interaction with the environment, but running RL algorithms in the real world poses sample efficiency and safety challenges.
+Moreover, in practical real-world settings we cannot assume access to perfect state information or dense reward signals.
+In this paper, we consider a variety of difficult industrial insertion tasks with visual inputs and different natural reward specifications, namely sparse rewards and goal images.
+We show that methods that combine RL with prior information, such as classical controllers or demonstrations, can solve these tasks from a reasonable amount of real-world interaction.
 </p>
 
 <!--h3 style="clear:both">Preprint</h3>
